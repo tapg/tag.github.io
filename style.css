@@ -462,7 +462,7 @@ section.white{
 }
 
 #intro .introText .btn{
-    margin-top:20px;
+    margin-top:40px;
 }
 
 
@@ -1369,4 +1369,46 @@ svg rect{
     .overlay ul li {
         min-height: 34px;
     }
+}
+
+.top-logo {
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+.top-logo.hidden-logo {
+    opacity: 0;
+}
+
+.home-icons {
+    position: absolute;
+    bottom: 45px;
+}
+
+.home-icon {
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.home-icon:hover {
+    opacity: 0.8;
+}
+
+.home-icon img{
+    display: inline-block;
+}
+
+.home-icon a{
+    display: inline-block;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    opacity: 1;
+}
+
+.description-text {
+    padding-top: 60px;
+}
+
+.dark h3 {
+        line-height: 25px;
 }
