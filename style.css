@@ -101,6 +101,8 @@ section {
 
 .sectionHeader p{
     margin-top:20px;
+    font-size: 1.3em;
+    line-height: 1.5em;
 }
 
 
@@ -1043,14 +1045,14 @@ section.white{
     position:relative;
 }
 #footer .topLine{
-    padding:20px;
+    padding: 40px 40px 100px 40px;
     margin:0 auto;
     background-color:#353535;
 }
 
 #footer .footerLogo{
     width:180px;
-    margin:40px;
+    margin: 10px;
 }
 
 #footer .bottomLine{
@@ -1371,18 +1373,46 @@ svg rect{
     }
 }
 
+@media screen and (min-width: 768px) {
+
+    .introText {
+        margin-top: 160px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .cta {
+        margin-left: -40px;
+    }
+
+    #intro {
+        background: url('img/mobile-intro.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
 .top-logo {
     transition: all 0.3s ease;
     opacity: 1;
+    margin-top: -45px;
 }
 
 .top-logo.hidden-logo {
     opacity: 0;
 }
 
+.introText h2 {
+    margin-top: 50px;
+}
+
 .home-icons {
-    position: absolute;
-    bottom: 45px;
+    display:  inline-block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
 }
 
 .home-icon {
@@ -1390,12 +1420,27 @@ svg rect{
     cursor: pointer;
 }
 
-.home-icon:hover {
-    opacity: 0.8;
+.home-icon .pricing {
+    opacity: 0;
+    transition: all 0.5s ease;
+    color: #FFF;
+}
+
+.home-icon:hover img {
+    opacity: 0.4;
+}
+
+.home-icon:hover .pricing {
+    opacity: 1;
+}
+
+.btn.cta {
+    font-size: 12px;
 }
 
 .home-icon img{
     display: inline-block;
+    transition: all 0.5s ease;
 }
 
 .home-icon a{
@@ -1410,5 +1455,53 @@ svg rect{
 }
 
 .dark h3 {
-        line-height: 25px;
+   line-height: 25px;
+}
+
+#steps.dark {
+    padding: 60px 0 120px 0;
+    background: #535353;
+    color: #c99f6c;
+}
+
+#steps.dark p {
+    color: #FFF;
+    font-size: 15px;
+}
+
+#steps h1.large-number {
+    font-size: 90px;
+    /* margin-bottom: 45px; */
+    line-height: 90px;
+}
+
+#steps .steps {
+    margin-top: 50px;
+}
+
+.dark h3 {
+    font-size: 20px;
+}
+
+.footerSocialIcons li {
+    cursor: pointer;
+}
+
+.img-responsive.logo-partner {
+    max-width: 150px;
+    margin-top: 60px;
+    display: inline-block;
+    margin-bottom: 60px;
+}
+
+#team {
+    padding: 10px;
+}
+
+.files {
+    padding-top: 20px;
+}
+
+#footer a {
+    cursor: pointer;
 }
