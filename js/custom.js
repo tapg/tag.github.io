@@ -280,18 +280,19 @@ $(document).ready(function () {
         if(proceed)
         {
             //data to be sent to server
-            post_data = {'userName':user_name, 'userEmail':user_email, 'userPhone':user_phone, 'userMessage':user_message};
-
-            //Ajax post data to server
-            $.post('contact_me.php', post_data, function(response){    /* change your email and subject in contact_me.php */
-
-                //load json data from server and output message
-                if(response.type == 'error')
+            emailjs.send("gmail","template_f2uO0Pyk",{
+                user_name: user_name,
+                user_email: user_email,
+                user_phone: user_phone,
+                user_message: user_message,
+            })
+            .then(function(response){
+                if(response.text != 'OK')
                 {
-                    output = '<div class="error">'+response.text+'</div>';
+                    output = '<div class="error">Um erro ocorreu. Tente novamente</div>';
                 }else{
 
-                    output = '<div class="success">'+response.text+'</div>';
+                    output = '<div class="success">Email enviado com sucesso</div>';
 
                     //reset values in all input fields
                     $('#contact_form input').val('');
@@ -299,7 +300,14 @@ $(document).ready(function () {
                 }
 
                 $("#result").hide().html(output).slideDown();
-            }, 'json');
+            });
+
+            // //Ajax post data to server
+            // $.post('contact_me.php', post_data, function(response){    /* change your email and subject in contact_me.php */
+
+            //     //load json data from server and output message
+
+            // }, 'json');
 
         }
     });
@@ -441,7 +449,7 @@ $(document).ready(function () {
         speed: 1000, // Integer. How fast to complete the scroll in milliseconds
         easing: 'easeInOutCubic', // Easing pattern to use
         updateURL: false, // Boolean. Whether or not to update the URL with the anchor hash on scroll
-        offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
+        offset: 320, // Integer. How far to offset the scrolling anchor location in pixels
         callbackBefore: function ( toggle, anchor ) {}, // Function to run before scrolling
         callbackAfter: function ( toggle, anchor ) {} // Function to run after scrolling
     });
