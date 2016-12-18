@@ -1376,14 +1376,6 @@ svg rect{
     }
 }
 
-@media screen and (max-width: 768px) {
-
-    .cta {
-        margin-left: -40px;
-    }
-
-}
-
 .top-logo {
     transition: all 0.3s ease;
     opacity: 1;
@@ -1401,7 +1393,7 @@ svg rect{
 .home-icons {
     display:  inline-block;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 
 }
 
@@ -1518,4 +1510,56 @@ svg rect{
 
 #result .success {
     color: #c99f6c;
+}
+
+.doubt-home {
+    color: #eee;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: lighter;
+    letter-spacing: 1px;
+}
+
+.praja-ribbon {
+  position: absolute;
+  right: -5px; top: -5px;
+  z-index: 1;
+  overflow: hidden;
+  width: 75px; height: 75px;
+  text-align: right;
+}
+.praja-ribbon span {
+  font-size: 10px;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 20px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 100px;
+  display: block;
+  background: #79A70A;
+  background: linear-gradient(#C99F6C 0%, #C29968 100%);
+  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 19px; right: -21px;
+}
+.praja-ribbon span::before {
+  content: "";
+  position: absolute; left: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid #C29968;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #C29968;
+}
+.praja-ribbon span::after {
+  content: "";
+  position: absolute; right: 0px; top: 100%;
+  z-index: -1;
+  border-left: 3px solid transparent;
+  border-right: 3px solid #C29968;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid #C29968;
 }
