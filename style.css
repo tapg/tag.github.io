@@ -1372,7 +1372,7 @@ svg rect{
 @media screen and (min-width: 768px) {
 
     .introText {
-        margin-top: 160px;
+        margin-top: 210px;
     }
 }
 
@@ -1382,12 +1382,6 @@ svg rect{
         margin-left: -40px;
     }
 
-    #intro {
-        background: url('img/mobile-intro.png');
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-    }
 }
 
 .top-logo {
@@ -1432,6 +1426,7 @@ svg rect{
 
 .btn.cta {
     font-size: 12px;
+    margin-bottom: 40px;
 }
 
 .home-icon img{
@@ -1518,5 +1513,9 @@ svg rect{
     transition: all 0.4s ease;
 }
 .footerSocialIcons i:hover {
+    color: #c99f6c;
+}
+
+#result .success {
     color: #c99f6c;
 }
