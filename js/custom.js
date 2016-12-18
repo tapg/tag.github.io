@@ -279,6 +279,9 @@ $(document).ready(function () {
         //everything looks good! proceed...
         if(proceed)
         {
+            
+            $('#preloader').css('opacity','0.6');
+            $('#preloader').fadeIn();
             //data to be sent to server
             emailjs.send("gmail","template_f2uO0Pyk",{
                 user_name: user_name,
@@ -298,7 +301,8 @@ $(document).ready(function () {
                     $('#contact_form input').val('');
                     $('#contact_form textarea').val('');
                 }
-
+                $('#preloader').fadeOut();
+                $('#preloader').css('opacity','1');
                 $("#result").hide().html(output).slideDown();
             });
 
