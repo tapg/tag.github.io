@@ -1563,3 +1563,20 @@ svg rect{
   border-bottom: 3px solid transparent;
   border-top: 3px solid #C29968;
 }
+
+#app-download {
+    height: 650px;
+    background: #fff;
+}
+
+.app-link {
+    max-width: 280px;
+    padding: 20px;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.app-link:hover {
+    opacity: 0.8;
+}
